@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff9ae;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 460px;
+    margin: auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.radio-group {
+    margin-top: 12px;
+    margin-bottom: 18px; 
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.radio-item input {
+    width: 18px;
+    height: 18px;
+}
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    background: #0077ff;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background: #005fd4;
+}
+
+/* Error message style */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+/* Styled File Upload */
+input[type="file"] {
+    padding: 12px;
+    background: #f5f5f5;
+    border: 1px dashed #aaa;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+input[type="file"]:hover {
+    background: #eee;
+    border-color: #0077ff;
+}
+
+
+/* MOBILE SCREEN FIX */
+@media (max-width: 480px) {
+    input {
+        font-size: 14px;
+        padding: 10px;
+    }
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+    .error {
+        font-size: 13px;
+    }
+}

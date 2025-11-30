@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ta">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matrimony Form</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>மணமுறை பதிவு படிவம்</h2>
+
+      <form id="matrimonyForm">
+        <label>பெயர் (Name)</label>
+        <input type="text" id="name" />
+        <div class="error" id="nameError">⚠️ பெயரை நிரப்பவும்</div>
+
+        <label>தொலைபேசி எண் (Phone Number)</label>
+        <input type="tel" id="phone" />
+        <div class="error" id="phoneError">⚠️ தொலைபேசி எண் அவசியம்</div>
+
+        <label>மின்னஞ்சல் (Email)</label>
+        <input type="email" id="email" />
+        <div class="error" id="emailError">⚠️ மின்னஞ்சல் அவசியம்</div>
+
+        <label>மணமகன் / மணமகள் (Bride / Groom)</label>
+        <div class="radio-group" style="margin-bottom: 20px">
+          <div class="radio-item">
+            <input type="radio" name="role" value="Bride" id="bride" />
+            <label>மணமகள் (Bride)</label>
+          </div>
+
+          <div class="radio-item">
+            <input type="radio" name="role" value="Groom" id="groom" />
+            <label>மணமகன் (Groom)</label>
+          </div>
+        </div>
+        <div class="error" id="roleError">⚠️ தேர்வு செய்யவும்</div>
+
+        <label>படத்தை பதிவேற்றவும் (Upload Image)</label>
+        <input type="file" id="image" />
+        <div class="error" id="imageError">⚠️ படத்தை பதிவேற்றவும்</div>
+
+        <button type="submit">சமர்ப்பிக்கவும் (Submit)</button>
+      </form>
+
+      <div
+        id="loadingScreen"
+        style="
+          display: none;
+          max-width: 460px;
+          margin: auto;
+          background: white;
+          padding: 25px;
+          border-radius: 15px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+          text-align: center;
+        "
+      >
+        <h2>Submitting your details...</h2>
+        <div
+          style="
+            width: 100%;
+            background: #ddd;
+            height: 12px;
+            border-radius: 10px;
+            margin-top: 20px;
+          "
+        >
+          <div
+            id="progressBar"
+            style="
+              width: 0%;
+              height: 12px;
+              background: #0077ff;
+              border-radius: 10px;
+              transition: width 0.3s;
+            "
+          ></div>
+        </div>
+        <p style="margin-top: 10px" id="progressText">0%</p>
+      </div>
+
+      <div
+        class="success-screen"
+        id="successScreen"
+        style="
+          display: none;
+          max-width: 460px;
+          margin: auto;
+          background: white;
+          padding: 25px;
+          border-radius: 15px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+          text-align: center;
+        "
+      >
+        <h2 style="color: green">✔ உங்கள் தகவல் வெற்றிகரமாக பெறப்பட்டது!</h2>
+        <p>நன்றி! விரைவில் உங்களை தொடர்புகொள்கிறோம்.</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
